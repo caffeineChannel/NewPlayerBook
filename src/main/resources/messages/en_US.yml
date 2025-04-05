@@ -1,0 +1,32 @@
+# General messages
+prefix: "§8[§aNew Player Guide§8] "
+no-permission: "§cYou don't have permission to perform this action!"
+
+# Book related
+book:
+  received: "§aYou have received a New Player Guide book!"
+  given-single: "§aGiven the guide book to player %s"
+  given-all: "§aGiven the guide book to %s online players"
+  default-title: "Welcome Guide"
+  default-author: "Server"
+  default-welcome-page: |-
+    §lWelcome to our server!
+    §7Please read this guide to learn about basic rules and gameplay.
+
+# Command related
+commands:
+  help:
+    header: "§aNew Player Guide Command Help"
+    givebook: "§6/npbook givebook [player] §7- Give the guide book (leave player blank for all online players)"
+    reload: "§6/npbook reload §7- Reload configuration"
+  unknown: "§cUnknown command, use /npbook for help"
+
+# Operation feedback
+feedback:
+  reload-success: "§aNew Player Guide configuration reloaded!"
+  player-not-found: "§cPlayer %s doesn't exist or is offline!"
+
+# Console logs
+console:
+  enable: "\u001B[32m[New Player Guide] Plugin enabled!\u001B[0m"  # ANSI green
+  disable: "\u001B[32m[New Player Guide] Plugin disabled!\u001B[0m" # ANSI green

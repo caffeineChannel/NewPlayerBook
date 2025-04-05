@@ -1,0 +1,21 @@
+name: NewPlayerBook
+version: '1.0'
+main: org.caffeine.newPlayerBook.NewPlayerBook
+api-version: '1.21'
+prefix: NewPlayerBook
+authors: [ 咖绯ん_caffeine ]
+description: 用于在新玩家加入服务器时自动发放新人书到背包的插件
+website: --
+language: zh_CN  # 默认语言设置
+commands:
+  npbook:
+    description: 新人书插件主命令
+    usage: /npbook [givebook|reload]
+
+permissions:
+  npbook.give:
+    description: 允许发放新人书
+    default: op
+  npbook.reload:
+    description: 允许重载配置
+    default: op

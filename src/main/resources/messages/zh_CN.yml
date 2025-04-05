@@ -1,0 +1,32 @@
+# 通用消息
+prefix: "§8[§a新人手册§8] "
+no-permission: "§c你没有执行此操作的权限！"
+
+# 书本相关
+book:
+  received: "§a你收到了一本新人指南书！"
+  given-single: "§a已向玩家 %s 发放新人书"
+  given-all: "§a已向 %s 名玩家发放新人书"
+  default-title: "欢迎指南"
+  default-author: "服务器"
+  default-welcome-page: |-
+    §l欢迎来到我们的服务器！
+    §7请阅读本指南了解基本规则和玩法。
+
+# 命令相关
+commands:
+  help:
+    header: "§a新人手册 命令帮助"
+    givebook: "§6/npbook givebook [玩家] §7- 发放新人书(留空玩家参数则为全部在线玩家)"
+    reload: "§6/npbook reload §7- 重载配置文件"
+  unknown: "§c未知命令，使用 /npbook 查看帮助"
+
+# 操作反馈
+feedback:
+  reload-success: "§a新人书配置文件已重载！"
+  player-not-found: "§c玩家 %s 不存在或不在线！"
+
+# 控制台日志
+console:
+  enable: "\u001B[32m[新人手册] 插件已启用!\u001B[0m"  # ANSI 绿色
+  disable: "\u001B[32m[新人手册] 插件已禁用!\u001B[0m" # ANSI 绿色
