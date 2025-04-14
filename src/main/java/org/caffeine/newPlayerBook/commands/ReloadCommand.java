@@ -25,8 +25,13 @@ public class ReloadCommand implements CommandExecutor {
             return true;
         }
 
-        plugin.reloadConfig();
-        plugin.getConfigManager().loadConfig();
+        try {
+            plugin.reloadConfig();
+            plugin.getConfigManager().loadConfig();
+        } catch (Exception e) {
+            sender.sendMessage(plugin.getMessageManager()
+                    .getMessage("feedback.reload-failed")+ ":" + e.getMessage());
+        }
         sender.sendMessage(plugin.getMessageManager()
                 .getMessage("feedback.reload-success"));
         return true;

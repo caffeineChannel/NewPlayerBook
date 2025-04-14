@@ -24,6 +24,7 @@ commands:
 # Operation feedback
 feedback:
   reload-success: "§aNew Player Guide configuration reloaded!"
+  reload-failed: "§cFailed to reload New Player Guide configuration!"
   player-not-found: "§cPlayer %s doesn't exist or is offline!"
 
 # Console logs

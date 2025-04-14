@@ -24,6 +24,7 @@ commands:
 # 操作反馈
 feedback:
   reload-success: "§a新人书配置文件已重载！"
+  reload-failed: "§c新人书配置文件重载失败！"
   player-not-found: "§c玩家 %s 不存在或不在线！"
 
 # 控制台日志
