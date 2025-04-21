@@ -1,5 +1,5 @@
 name: NewPlayerBook
-version: '1.0'
+version: '1.1'
 main: org.caffeine.newPlayerBook.NewPlayerBook
 api-version: '1.21'
 prefix: NewPlayerBook
@@ -18,4 +18,7 @@ permissions:
     default: op
   npbook.reload:
     description: 允许重载配置
+    default: op
+  npbook.help:
+    description: 允许查看插件帮助
     default: op

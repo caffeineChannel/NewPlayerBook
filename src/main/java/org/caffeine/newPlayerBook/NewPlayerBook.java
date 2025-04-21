@@ -16,7 +16,6 @@ import java.util.Objects;
 public final class NewPlayerBook extends JavaPlugin {
     private ConfigManager configManager;
     private MessageManager messageManager;
-    private CommandManager commandManager;
 
     @Override
     public void onEnable() {
@@ -29,7 +28,7 @@ public final class NewPlayerBook extends JavaPlugin {
         messageManager.loadMessages(configManager.getLanguage());
 
         // 初始化命令和事件（传递messageManager）
-        commandManager = new CommandManager(this);
+        CommandManager commandManager = new CommandManager(this);
         Objects.requireNonNull(getCommand("npbook")).setExecutor(commandManager);
         // 注册命令执行器和 Tab 补全
         Objects.requireNonNull(getCommand("npbook")).setTabCompleter(new BookTabCompleter());
@@ -65,6 +64,7 @@ public final class NewPlayerBook extends JavaPlugin {
     private void printSplashArt() {
         String color = "\u001B[32m";
         String reset = "\u001B[0m";
+
         String[] splashLines = new String[]{
                 color + " _   _ ____   ____              _    " + reset,
                 color + "| \\ | |  _ \\ |  _ )  ___   ___ | | __" + reset,

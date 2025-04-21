@@ -4,6 +4,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.caffeine.newPlayerBook.NewPlayerBook;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author 咖绯ん_caffeine
@@ -18,7 +19,7 @@ public class ReloadCommand implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    public boolean onCommand(CommandSender sender, @NotNull Command cmd, @NotNull String label, String @NotNull [] args) {
         if (!sender.hasPermission("npbook.reload")) {
             sender.sendMessage(plugin.getMessageManager()
                     .getMessage("no-permission"));

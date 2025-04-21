@@ -4,6 +4,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.caffeine.newPlayerBook.NewPlayerBook;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author 咖绯ん_caffeine
@@ -21,8 +22,13 @@ public class CommandManager implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String label, String[] args) {
         if (args.length == 0) {
+            if (!sender.hasPermission("npbook.give")) {
+                sender.sendMessage(plugin.getMessageManager()
+                        .getMessage("no-permission"));
+                return true;
+            }
             // 发送国际化命令帮助
             sender.sendMessage(plugin.getMessageManager().getMessage("commands.help.header"));
             sender.sendMessage(plugin.getMessageManager().getMessage("commands.help.givebook"));

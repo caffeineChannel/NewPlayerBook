@@ -23,7 +23,7 @@ public class BookTabCompleter implements TabCompleter {
             @NotNull CommandSender sender,
             @NotNull Command cmd,
             @NotNull String label,
-            @NotNull String[] args) {
+            @NotNull String @NotNull [] args) {
 
         List<String> completions = new ArrayList<>();
 

@@ -27,12 +27,13 @@ public class MessageManager {
         File langFile = new File(plugin.getDataFolder(), resourcePath);
 
         // 确保父目录存在
-        langFile.getParentFile().mkdirs();
+        if (!langFile.getParentFile().mkdirs()){
+            plugin.getLogger().warning("[NewPlayerBook]create language folder error/创建语言文件夹出错");
+        }
 
         // 如果文件不存在，从JAR释放（不覆盖现有文件）
         if (!langFile.exists()) {
             plugin.saveResource(resourcePath, false);
-            // 注：saveResource()的路径不能以/开头
         }
 
         // 加载物理文件
